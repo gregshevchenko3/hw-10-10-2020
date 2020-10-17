@@ -1,0 +1,125 @@
+body{
+    background-image: url("./imgs/bkg.png");
+    background-repeat: repeat;
+}
+.container {
+    position: relative;
+    margin: auto;
+    padding: 0px;
+    width: 800px;
+    height: 450px;
+}
+.container input[type="radio"] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5px;
+    height: 5px;
+    margin: 0px;
+    padding: 0px;
+}
+.container label{
+    position: relative;
+    top: calc(100% - 2px);
+    width: calc((100% + 10px)/7 - 10px);
+    height: calc(100%/7);
+    margin: 10px 5px;
+    padding: 0;
+    float: left;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px -1px black;
+    border: 2px solid white;
+}
+.container label.left {
+    margin-left: 0px;
+    margin-right: 5px;
+}
+.container label.right {
+    margin-right: 0px;
+    margin-left: 5px;
+}
+.container input[type="radio"]:checked + label{
+    border: 2px solid red;
+}
+.slide{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px -11px black;
+    z-index: 10;
+}
+
+.container label:nth-of-type(1),
+.container label:nth-of-type(1) + .slide{
+    background-image: url("./imgs/1.jpg");
+}
+.container label:nth-of-type(2),
+.container label:nth-of-type(2) + .slide{
+    background-image: url("./imgs/2.jpg");
+}
+
+.container label:nth-of-type(3),
+.container label:nth-of-type(3) + .slide{
+    background-image: url("./imgs/3.jpg");
+}
+.container label:nth-of-type(4),
+.container label:nth-of-type(4) + .slide{
+    background-image: url("./imgs/4.jpg");
+}
+.container label:nth-of-type(5),
+.container label:nth-of-type(5) + .slide{
+    background-image: url("./imgs/5.jpg");
+}
+.container label:nth-of-type(7),
+.container label:nth-of-type(7) + .slide{
+    background-image: url("./imgs/7.jpg");
+}
+.container label:nth-of-type(6),
+.container label:nth-of-type(6) + .slide{
+    background-image: url("./imgs/6.jpg");
+}  
+.container input[type="radio"]:checked + label + .slide {
+    z-index: 1000;
+}
+.container button
+{
+    position: absolute;
+    margin: 0px;
+    z-index: 2000;
+    border-radius: 50%;
+    background-position: left center;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    outline-style: none;
+    background-image: url("./imgs/left-32.png");
+}
+.container .nav {
+    top: calc(50% - 38px/2);
+    width: 38px;
+    height: 38px;
+    border: 2px solid rgb(199, 69, 55);
+    background-color: rgb(246,165,24);
+}
+.container .prev {
+    left: 20px;
+}
+.container .next {
+    right: 20px;
+    transform: rotate(180deg);
+}
+.container .run {
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgba(55, 55, 55, 0.75);
+    background-color: rgba(55, 55, 55, 0.75);
+    background-image: url("./imgs/run-32.png");
+}
